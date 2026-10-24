@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trà Sữa Mây – Trà sữa pha mới mỗi ngày</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ube:#3b2a5c;
+  --taro:#e8def6;
+  --matcha:#8fb86b;
+  --sugar:#7a4a2b;
+  --milk:#fbf8ff;
+  --ink:#2a2038;
+  --display:"Baloo 2","Segoe UI",Arial,sans-serif;
+  --body:"Be Vietnam Pro","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--milk);line-height:1.65}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* Thanh trên cùng */
+header{position:sticky;top:0;z-index:5;background:var(--ube);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.4rem;text-decoration:none}
+nav a{margin-left:20px;text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover,nav a:focus-visible{text-decoration:underline}
+
+/* Phần đầu trang */
+.hero{background:var(--taro);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;padding-top:56px;padding-bottom:56px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.1;color:var(--ube)}
+.hero p{margin:16px 0 26px;max-width:46ch;font-size:1.05rem}
+.btn{display:inline-block;background:var(--ube);color:#fff;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:600}
+.btn:hover,.btn:focus-visible{background:var(--sugar)}
+
+/* Ly trà sữa vẽ bằng CSS */
+.cup{position:relative;width:200px;height:290px;margin:0 auto}
+.cup .straw{position:absolute;left:96px;top:-10px;width:12px;height:120px;background:var(--matcha);border-radius:6px;transform:rotate(8deg)}
+.cup .lid{position:absolute;top:30px;left:6px;width:188px;height:22px;background:#fff;border-radius:12px;box-shadow:0 2px 0 #cdbfe6}
+.cup .body{position:absolute;top:50px;left:12px;width:176px;height:230px;clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);
+  background:linear-gradient(#e9c9a0 0 55%,#c99563 55% 100%)}
+.cup .pearls{position:absolute;bottom:10px;left:30px;width:140px;height:56px;
+  background:radial-gradient(circle at 10px 10px,#2b1a12 7px,transparent 8px) 0 0/22px 22px;border-radius:0 0 20px 20px}
+
+/* Các khu vực */
+section{padding:60px 0}
+h2{font-family:var(--display);font-weight:800;font-size:2rem;color:var(--ube);margin-bottom:8px}
+.sub{margin-bottom:28px;color:#5b4d70}
+
+/* Thực đơn */
+.menu{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.item{background:#fff;border:2px solid var(--taro);border-radius:18px;padding:18px}
+.item h3{font-family:var(--display);font-size:1.15rem;color:var(--ube);line-height:1.3}
+.item p{font-size:.9rem;color:#5b4d70;margin:4px 0 10px}
+.price{font-weight:600;color:var(--sugar)}
+
+/* Topping */
+.toppings{background:var(--ube);color:#fff}
+.toppings h2{color:#fff}
+.toppings .sub{color:var(--taro)}
+.tp{display:flex;flex-wrap:wrap;gap:12px}
+.tp span{background:rgba(255,255,255,.12);padding:8px 18px;border-radius:999px}
+
+/* Liên hệ */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.info h3{font-family:var(--display);color:var(--ube);font-size:1.15rem}
+
+footer{background:var(--taro);text-align:center;padding:20px;font-size:.9rem;color:#5b4d70}
+
+@media (max-width:700px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero p{margin-left:auto;margin-right:auto}
+  nav a{margin-left:12px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn{transition:background .2s}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Trà Sữa Mây</a>
+    <nav>
+      <a href="#thuc-don">Thực đơn</a>
+      <a href="#topping">Topping</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Trà sữa pha mới, trân châu nấu mỗi ngày</h1>
+        <p>Trà ủ tươi, sữa béo vừa miệng, trân châu dẻo mềm. Chọn ly bạn thích, chúng tôi pha ngay khi bạn gọi.</p>
+        <a class="btn" href="#thuc-don">Xem thực đơn</a>
+      </div>
+      <div class="cup" role="img" aria-label="Ly trà sữa trân châu">
+        <div class="straw"></div>
+        <div class="lid"></div>
+        <div class="body"></div>
+        <div class="pearls"></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="thuc-don">
+    <div class="wrap">
+      <h2>Thực đơn</h2>
+      <p class="sub">Giá cho ly size M. Thêm 5.000đ nếu muốn size L.</p>
+      <div class="menu">
+        <div class="item"><h3>Trà sữa trân châu</h3><p>Trà đen ủ, sữa tươi, trân châu đen.</p><span class="price">35.000đ</span></div>
+        <div class="item"><h3>Trà sữa đường đen</h3><p>Sữa tươi, siro đường đen nấu tại quán.</p><span class="price">45.000đ</span></div>
+        <div class="item"><h3>Trà sữa matcha</h3><p>Bột matcha Nhật, vị đậm và thơm.</p><span class="price">42.000đ</span></div>
+        <div class="item"><h3>Trà sữa khoai môn</h3><p>Khoai môn xay mịn, béo nhẹ.</p><span class="price">40.000đ</span></div>
+        <div class="item"><h3>Hồng trà macchiato</h3><p>Hồng trà thơm phủ lớp kem cheese mặn.</p><span class="price">42.000đ</span></div>
+        <div class="item"><h3>Trà đào cam sả</h3><p>Đào miếng, cam tươi, hương sả. Không sữa.</p><span class="price">38.000đ</span></div>
+        <div class="item"><h3>Trà vải hoa hồng</h3><p>Trà thanh mát, vải ngâm, cánh hồng.</p><span class="price">36.000đ</span></div>
+        <div class="item"><h3>Sữa tươi trân châu đường đen</h3><p>Không trà, vị sữa nguyên bản.</p><span class="price">45.000đ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="topping" class="toppings">
+    <div class="wrap">
+      <h2>Topping</h2>
+      <p class="sub">Thêm vào ly nào cũng được.</p>
+      <div class="tp">
+        <span>Trân châu đen +5.000đ</span>
+        <span>Thạch dừa +5.000đ</span>
+        <span>Pudding trứng +7.000đ</span>
+        <span>Kem cheese +10.000đ</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="lien-he">
+    <div class="wrap">
+      <h2>Liên hệ</h2>
+      <p class="sub">Ghé quán hoặc gọi điện để đặt trước.</p>
+      <div class="info">
+        <div><h3>Địa chỉ</h3><p>123 Đường Mẫu, Quận 1, TP. Hồ Chí Minh</p></div>
+        <div><h3>Giờ mở cửa</h3><p>Hằng ngày, 8:00 – 22:00</p></div>
+        <div><h3>Điện thoại</h3><p>0900 000 000</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Trà Sữa Mây. Cảm ơn bạn đã ghé quán.</footer>
+
+</body>
+</html>
